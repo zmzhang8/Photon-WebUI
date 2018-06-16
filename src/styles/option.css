@@ -1,0 +1,124 @@
+.group {
+  padding: 8px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.header {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.row {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > .left {
+  flex: 0 0 140px;
+  padding: 0 8px;
+}
+
+.row > .right {
+  flex: 1 1 auto;
+  padding: 0 8px;
+}
+
+.pair {
+  display: flex;
+  margin: 0 -4px;
+}
+
+.pair > .fixed {
+  flex: 0 0 auto;
+  margin: 0 4px;
+}
+
+.pair > .expanded {
+  flex: 1 1 auto;
+  margin: 0 4px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  text-align: right;
+}
+
+input, textarea, select {
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+textarea {
+  height: 160px;
+  resize: vertical;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+}
+
+input[type=number], select{
+  min-width: 80px;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #666;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:disabled {
+  border: 1px solid #ddd;
+  color: #444;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  text-align: center;
+  font-size: 16px;
+}
+
+.button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #666;
+}
+
+.button-large {
+  min-width: 64px;
+  padding: 8px 8px;
+  font-size: 20px;
+}
+
+.vspace {
+  margin: 12px 0 0 0;
+}
+
+.hspace {
+  margin: 0 0 0 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}

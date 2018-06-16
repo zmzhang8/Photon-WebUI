@@ -1,0 +1,30 @@
+.toolbar {
+  height: 48px;
+  position: sticky;
+  top: 0px;
+  padding: 0px 8px;
+  border-bottom: 2px solid lightgray;
+  color: #333;
+  background-color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: stretch;
+}
+
+.toolbar > a {
+  flex: 0 0 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #333;
+}
+
+.toolbar > .disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.seperator-h {
+  margin: 12px 12px;
+  border: 1px dashed #aaa;
+}
