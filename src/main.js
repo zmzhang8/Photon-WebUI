@@ -1,25 +1,17 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
+import router from './router'
+import App from './App.vue'
 
 import Aria2Manager from '@/utils/aria2manager'
-
-import App from './App'
-import router from './router'
-
-/*
-  aria2
-*/
-let aria2manager = new Aria2Manager()
-aria2manager.setSyncInterval(1000)
 
 /*
   Vue
 */
 Vue.config.productionTip = false
-Vue.use(VueI18n)
+Vue.config.devtools = process.env.NODE_ENV === 'development'
 
+Vue.use(VueI18n)
 const messages = {
   'en-US': { message: require('@/lang/en-US.json') },
   'zh-CN': { message: require('@/lang/zh-CN.json') }
@@ -29,6 +21,12 @@ const i18n = new VueI18n({
   fallbackLocale: 'en-US',
   messages
 })
+
+/*
+  aria2
+*/
+let aria2manager = new Aria2Manager()
+aria2manager.setSyncInterval(1000)
 
 new Vue({
   components: { App },
@@ -45,8 +43,8 @@ new Vue({
 */
 let completeSound = new Audio(require('@/assets/complete.mp3'))
 let errorSound = new Audio(require('@/assets/error.mp3'))
-aria2manager.onBtDownloadComplete = (tasks, serverName, serverIndex) => completeSound.play()
-aria2manager.onDownloadComplete = (tasks, serverName, serverIndex) => {
+aria2manager.onBtDownloadComplete = () => completeSound.play()
+aria2manager.onDownloadComplete = (tasks) => {
   if (tasks.some(task => !task.isBT)) completeSound.play()
 }
-aria2manager.onDownloadError = (tasks, serverName, serverIndex) => errorSound.play()
+aria2manager.onDownloadError = () => errorSound.play()

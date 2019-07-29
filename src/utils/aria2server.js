@@ -153,7 +153,9 @@ export default class Aria2Server {
 
 ['onDownloadStart', 'onDownloadPause', 'onDownloadStop', 'onDownloadComplete', 'onDownloadError', 'onBtDownloadComplete'].forEach(method => {
   Object.defineProperty(Aria2Server.prototype, method, {
-    get: function () {},
+    get: function () {
+      return undefined
+    },
     set: function (callback) {
       let handle = this._handle
       let formatTask = this._formatTask
