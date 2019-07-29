@@ -71,6 +71,9 @@ export default class Aria2Server {
     let options = task.seeding ? defaultSeedingOptions : defaultNoSeedingOptions
     switch (task.type) {
       case 'torrent':
+        if (task.selectfile) {
+          options['select-file'] = task.selectfile
+        }
         handle.addTorrent(task.file, options, successCallback, errorCallback)
         break
       case 'metalink':
