@@ -6,6 +6,10 @@ Languages: [English](https://github.com/alanzhangzm/Photon-WebUI) [中文](https
 
 如果你想要一个桌面下载器，请尝试 [*Photon*](https://github.com/alanzhangzm/Photon/blob/master/README.zh-CN.md)。
 
+# 特色
+- 管理多个 aria2 服务器
+- BT：支持选择文件下载
+
 
 ## 使用
 
@@ -16,6 +20,7 @@ Languages: [English](https://github.com/alanzhangzm/Photon-WebUI) [中文](https
 
 ![downloading](screenshot/downloading.zh-CN.png)
 ![settings](screenshot/settings.zh-CN.png)
+![torrent](screenshot/torrent.zh-CN.png)
 
 ## 许可证
 [Apache-2.0](https://github.com/alanzhangzm/Photon-WebUI/blob/master/LICENSE)

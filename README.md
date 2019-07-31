@@ -11,11 +11,17 @@ For desktop downloader, please have a look at [*Photon*](https://github.com/alan
 
 Visit https://alanzhangzm.github.io/Photon-WebUI
 
+## Feature
+
+- Manage multiple aria2 servers
+- BT: selective downloading
+
 
 ## Screenshots
 
 ![downloading](screenshot/downloading.png)
 ![settings](screenshot/settings.png)
+![torrent](screenshot/torrent.png)
 
 ## Development
 
