@@ -14,13 +14,16 @@ export default class Aria2RPC {
     this._address = host + ':' + port + '/jsonrpc'
     if (this._rpc) this._rpc.setAddress(this._address, encryption)
     else {
-      try {
-        this._rpc = new RPCWebSocket(this._address, encryption, 'aria2')
-      } catch (error) {
-        console.error(error.message)
-        console.warn('Fall back to HTTP request.')
-        this._rpc = new RPCHTTP(this._address, encryption, 'aria2')
-      }
+      this._rpc = new RPCHTTP(this._address, encryption, 'aria2')
+      // Chrome doesn't allow unsecure websocket connections to localhost
+      // https://stackoverflow.com/questions/50704614/websocket-connection-fails-on-chrome-without-ssl
+      // try {
+      //   this._rpc = new RPCWebSocket(this._address, encryption, 'aria2')
+      // } catch (error) {
+      //   console.error(error.message)
+      //   console.warn('Fall back to HTTP request.')
+      //   this._rpc = new RPCHTTP(this._address, encryption, 'aria2')
+      // }
     }
   }
 
