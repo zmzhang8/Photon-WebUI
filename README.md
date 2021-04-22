@@ -9,7 +9,7 @@ For desktop downloader, please have a look at [*Photon*](https://github.com/alan
 
 ## Use
 
-Visit https://alanzhangzm.github.io/Photon-WebUI
+Visit https://github.com/zmzhang8/Photon-WebUI
 
 ## Feature
 

@@ -13,7 +13,7 @@ Languages: [English](https://github.com/alanzhangzm/Photon-WebUI) [中文](https
 
 ## 使用
 
-访问 https://alanzhangzm.github.io/Photon-WebUI
+访问 https://github.com/zmzhang8/Photon-WebUI
 
 
 ## 截图
